@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Other Fees</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="image.png" alt="SQI College of ICT Logo" class="logo-img">
+            </div>
+            <div class="menu-section">
+                <h3 class="menu-title">Payments</h3>
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="#"><i class="fa-solid fa-graduation-cap"></i> Pay Tuition</a>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="#"><i class="fa-solid fa-money-bill-wave"></i> Pay Other Fees</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#"><i class="fa-solid fa-clock-rotate-left"></i> Payment History</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#"><i class="fa-solid fa-receipt"></i> Transaction History</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-section">
+                <h3 class="menu-title">Others</h3>
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="#"><i class="fa-solid fa-bell"></i> Notice Board</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#"><i class="fa-solid fa-house"></i> Accomodation</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#"><i class="fa-solid fa-check"></i> Election</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#"><i class="fa-regular fa-square"></i> Certificate</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="menu-section bottom-menu">
+                 <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="#"><i class="fa-solid fa-circle-question"></i> Help</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="mobile-header">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <img src="image.png" alt="SQI College of ICT" class="mobile-logo-img">
+            </div>
+            
+            <header class="page-header">
+                <div class="header-titles">
+                    <h1>Pay Other Fees</h1>
+                    <p>Select the fee you want to pay and proceed with payment.</p>
+                </div>
+                <div class="header-actions">
+                    <div class="select-wrapper">
+                        <label for="fee-select">Select Fee</label>
+                        <select id="fee-select">
+                            <option value="course">Course Fee</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-outline">History</button>
+                </div>
+            </header>
+
+            <div class="payment-card">
+                <h2 class="card-title">SELECTED FEES (1)</h2>
+                
+                <div class="fee-row">
+                    <div class="fee-info">
+                        <span class="fee-name">Course Fee</span>
+                        <span class="fee-desc">Course Fee</span>
+                    </div>
+                    <div class="fee-amount">₦500,000</div>
+                </div>
+
+                <hr class="divider">
+
+                <button class="btn btn-paystack">Pay with Paystack</button>
+
+                <div class="summary">
+                    <div class="summary-row">
+                        <span class="summary-label">Sub Total:</span>
+                        <span class="summary-value">₦500,000.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Charge:</span>
+                        <span class="summary-value">₦5000.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span class="summary-label">Total:</span>
+                        <span class="summary-value">₦505,000.00</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
